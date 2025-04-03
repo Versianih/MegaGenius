@@ -13,11 +13,10 @@
 ## Materiais Utilizados
 
 - **Placa Arduino Mega 2560**
-- **12 LEDs** (cores à sua escolha)
-- **12 Botões**
+- **13 LEDs** (cores à sua escolha)
+- **13 Botões**
 - **Resistores**:
   - 220Ω para os LEDs
-  - 10kΩ para os botões
 - **Protoboard** e fios de conexão
 - Fonte de alimentação adequada para o Arduino Mega
 
