@@ -15,6 +15,7 @@
 - **Placa Arduino Mega 2560**
 - **13 LEDs** (cores à sua escolha)
 - **13 Botões**
+- **1 Buzzer**
 - **Resistores**:
   - 220Ω para os LEDs
 - **Protoboard** e fios de conexão
@@ -62,6 +63,14 @@ Os botões estão conectados às seguintes portas digitais:
 | Botão 13(botão de início)| 46    |
 
 
+### Buzzers
+Os buzzers estão conectados às seguintes portas digitais:
+
+| Buzzer   | Porta |
+|-------|-------|
+| Buzzer | A1    |
+
+
 ## Funcionamento do Jogo
 
 1. Para começar o jogo, verifique se o led de início está aceso, e aperte o botão de início para começar o jogo.
@@ -76,9 +85,10 @@ Os botões estão conectados às seguintes portas digitais:
 
 1. Conecte os **LEDs** às portas especificadas na seção de **Pinagem**. Use resistores de 220Ω em série com cada LED para evitar danos.
 2. Conecte os **botões** às portas especificadas na seção de **Pinagem**. Não é necessária a utilização de resistores de 10kΩ, pois o sistema utiliza o INPUT_PULLUP interno do arduino.
-3. Monte o circuito na protoboard, organizando os componentes para facilitar a conexão e manutenção.
-4. Conecte o Arduino Mega ao computador via cabo USB.
-5. Faça o upload do código do projeto (disponível abaixo) para o Arduino.
+3. Conecte o Buzzer na porta especificada.
+4. Monte o circuito na protoboard, organizando os componentes para facilitar a conexão e manutenção.
+5. Conecte o Arduino Mega ao computador via cabo USB.
+6. Faça o upload do código do projeto (disponível abaixo) para o Arduino.
 
 ## Código
 

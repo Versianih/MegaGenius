@@ -3,6 +3,7 @@ int leds[12] = {23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45};
 int botoes[12] = {22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44};
 int start_led = 47;
 int start_button = 46;
+int buzzer = A1;
 int tons[12] = {262, 294, 330, 349, 392, 440, 494, 523, 587, 659, 698, 784};
 int passo = 0;
 int botao_pressionado = 0;
@@ -16,7 +17,7 @@ void setup() {
   Serial.begin(9600);
 
   // Buzzer (opcional)
-  pinMode(A1, OUTPUT);
+  pinMode(buzzer, OUTPUT);
 
   // Leds
   for (int i = 0; i <= 11; i++) {
@@ -71,10 +72,10 @@ void proximaRodada() {
 
 void reproduzirSequencia() {
   for (int i = 0; i < rodada; i++) {
-    //tone(7, tons[sequencia[i]]);
+    tone(buzzer, tons[sequencia[i]]);
     digitalWrite(leds[sequencia[i]], HIGH);
     delay(500);
-    //noTone(7);
+    noTone(buzzer);
     digitalWrite(leds[sequencia[i]], LOW);
     delay(100);
   }
@@ -87,11 +88,11 @@ void aguardarJogador() {
       for (int i = 0; i <= 11; i++) {
         if (digitalRead(botoes[i]) == LOW) {
           botao_pressionado = i;
-          //tone(7, tons[i]);
+          tone(buzzer, tons[i]);
           digitalWrite(leds[i], HIGH);
           delay(300);
           digitalWrite(leds[i], LOW);
-          //noTone(7);
+          noTone(buzzer);
           jogada_efetuada = true;
         }
       }
@@ -99,11 +100,11 @@ void aguardarJogador() {
     //verificar jogada
     if (sequencia[passo] != botao_pressionado) {
       for (int i = 0; i <= 11; i++) {
-        //tone(7, 70);
+        tone(buzzer, 70);
         digitalWrite(leds[i], HIGH);
         delay(100);
         digitalWrite(leds[i], LOW);
-        //noTone(7);
+        noTone(buzzer);
       }
       game_over = true;
       break;
