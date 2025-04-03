@@ -97,9 +97,9 @@ O código completo do projeto está disponível neste repositório. Para usá-lo
 1. Clone este repositório:
    ```bash
    git clone https://github.com/versianih/MegaGenius
-   Abra o arquivo .ino no Arduino IDE.
    ```
-2. Conecte o Arduino Mega ao computador e faça o upload do código disponível em [genius.ino](genius.ino).
+2. Abra o arquivo [genius.ino](genius.ino) no Arduino IDE.
+3. Conecte o Arduino Mega ao computador e faça o upload do código disponível em [genius.ino](genius.ino) para a placa.
 
 ## Contribuições
 Contribuições são bem-vindas! Se você tiver sugestões de melhorias ou correções, sinta-se à vontade para abrir uma issue ou enviar um pull request.
