@@ -63,8 +63,8 @@ Os botões estão conectados às seguintes portas digitais:
 | Botão 13(botão de início)| 46    |
 
 
-### Buzzers
-Os buzzers estão conectados às seguintes portas digitais:
+### Buzzer
+O buzzer está conectado à seguinte porta:
 
 | Buzzer   | Porta |
 |-------|-------|
